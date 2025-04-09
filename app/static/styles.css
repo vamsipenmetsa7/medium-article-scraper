@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #4a4a4a;
+}
+
+header p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.url-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.url-form label {
+    font-size: 1rem;
+    color: #555;
+}
+
+.url-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.url-form button {
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.url-form button:hover {
+    background-color: #0056b3;
+}
+
+.results {
+    margin-top: 30px;
+}
+
+.results h2 {
+    font-size: 1.5rem;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+.results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.results li {
+    margin-bottom: 10px;
+}
+
+results a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.results a:hover {
+    color: #0056b3;
+}
+
+/* General list styling */
+ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: disc; /* Use disc bullets for unordered lists */
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Top-level list styling */
+.top-level-list {
+    counter-reset: list-counter; /* Reset the counter for the top-level list */
+}
+
+.top-level-list > li {
+    list-style-type: decimal; /* Use numbers for the top-level list */
+    counter-increment: list-counter; /* Increment the counter */
+}
+
+.top-level-list > li::marker {
+    content: counter(list-counter) ". "; /* Display the counter with a period */
+}
+
+/* Nested list styling */
+.nested-list {
+    counter-reset: nested-counter; /* Reset the counter for nested lists */
+    margin-left: 20px; /* Indent nested lists */
+}
+
+.nested-list > li {
+    list-style-type: none; /* Remove default list styling */
+    counter-increment: nested-counter; /* Increment the nested counter */
+}
+
+.nested-list > li::marker {
+    content: "• "; /* Use a bullet point for nested lists */
+    color: #555; /* Muted color for nested bullets */
+}
+
+/* Link styling */
+li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+li a:hover {
+    color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #6c757d;
+}

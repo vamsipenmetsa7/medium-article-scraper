@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium Article Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Medium Article Scraper</h1>
+            <p>Extract headers and links from Medium articles effortlessly.</p>
+        </header>
+        <main>
+            <form method="POST" class="url-form">
+                <label for="article_url">Enter Medium Article URL:</label>
+                <input type="url" id="article_url" name="article_url" placeholder="https://medium.com/..." required>
+                <button type="submit">Scrape Headers</button>
+            </form>
+            {% if headers_data %}
+                <section class="results">
+                    <h2>Headers Found:</h2>
+                    <ol class="top-level-list">
+                        {% macro render_hierarchy(headers) %}
+                            {% for header in headers %}
+                                <li>
+                                    <a href="{{ header.link }}" target="_blank">{{ header.text }}</a>
+                                    {% if header.children %}
+                                        <ol class="nested-list">
+                                            {{ render_hierarchy(header.children) }}
+                                        </ol>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        {% endmacro %}
+                        {{ render_hierarchy(headers_data) }}
+                    </ol>
+                </section>
+            {% endif %}
+        </main>
+        <footer>
+            <p>&copy; 2025 Medium Scraper. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
