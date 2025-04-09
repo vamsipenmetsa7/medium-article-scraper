@@ -1,4 +1,4 @@
-# Medium Header Scraper: Automate Table of Contents Creation for Your Articles in Seconds
+# [Medium Header Scraper: Automate Table of Contents Creation for Your Articles in Seconds](https://vamsipenmetsa.medium.com/medium-header-scraper-automate-table-of-contents-creation-for-your-articles-in-seconds-f6bb66b25d56)
 ## Medium article header scraper App
 
 This project is a Flask application that allows users to scrape headers from Medium articles. Users can input a Medium article URL, and the application will return the titles and links of the headers in a well-indented format.
