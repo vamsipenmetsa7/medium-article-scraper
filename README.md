@@ -2,6 +2,9 @@
 
 This project is a Flask application that allows users to scrape headers from Medium articles. Users can input a Medium article URL, and the application will return the titles and links of the headers in a well-indented format.
 
+<img width="995" alt="image" src="https://github.com/user-attachments/assets/6eca5ac5-b98a-4ec3-ac10-483cd31154ef" />
+
+
 ## Project Structure
 
 ```
