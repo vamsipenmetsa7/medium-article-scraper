@@ -1,4 +1,4 @@
-# Medium Flask App
+# Medium article header scraper App
 
 This project is a Flask application that allows users to scrape headers from Medium articles. Users can input a Medium article URL, and the application will return the titles and links of the headers in a well-indented format.
 
