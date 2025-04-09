@@ -8,7 +8,7 @@ This project is a Flask application that allows users to scrape headers from Med
 ## Project Structure
 
 ```
-medium-flask-app
+medium-header-scraper-app
 ├── app
 │   ├── static
 │   │   └── styles.css        # CSS styles for the application
